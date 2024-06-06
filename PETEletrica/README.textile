@@ -1,0 +1,30 @@
+h1. PET Eletrica library
+Version: 2.0.0
+Release Date: 2019-08-02
+Notes: "A biblioteca do PET Elétrica foi atualizada para trabalhar com duas pontes H diferentes. A L298N é a padrão do projeto, usada para as montagens com os calouros. A L293D - CI de 16 pinos - foi implementada recentemente na montagem do robô fixo do grupo. As diferenças entre elas se dão quanto à forma de passagem de comandos PWM para os motores, basicamente.
+Para as montagens padrão com a ponte H L298N, usa-se a classe Motores, como no exemplo a seguir:
+Motores motor(IN1, IN2, IN3, IN4);
+motor.set_motors(ValorPWM);
+IN1 e IN2 se referem ao motor da esquerda, enquando que IN3 e IN4 ao motor da direita.
+Para as montagens com a ponte H L293D, como do robô fixo, usa-se a classe MotoresFixo, como no exemplo a seguir:
+MotoresFixo motor(ENE, END, IN1, IN2, IN3, IN4);
+motor.set_motorsFixo(ValorPWM);
+Assim como antes, IN1 e IN2 se referem ao motor da esquerda, enquando que IN3 e IN4 ao motor da direita. Contudo, agora temos também ENE(enable esquerda) e END(enable direita), referentes aos pinos de enable da ponte H, responsáveis por receber os sinais PWM e assim modularem a velocidade dos motores."
+"www.peteletrica.com":http://www.peteletrica.com/
+
+h1. Arduino library for the Pololu QTR reflectance sensors
+
+Version: 2.0.1
+Release Date: 2012-09-13
+"www.pololu.com":http://www.pololu.com/
+
+h2. Summary
+
+This is a library for the "Arduino":http://pololu.com/catalog/product/1616 that interfaces with the "Pololu QTR reflectance sensors":http://www.pololu.com/catalog/category/123 ("QTR-1A":http://www.pololu.com/catalog/product/958, "QTR-1RC":http://www.pololu.com/catalog/product/959, "QTR-8A":http://www.pololu.com/catalog/product/960, and "QTR-8RC":http://www.pololu.com/catalog/product/961).
+
+For documentation, please see the "user's guide":http://www.pololu.com/docs/0J19 for the library on Pololu's website.
+
+h2. Version History
+
+* 2.0.1 (2012-09-13): Added a 200 us delay after emitter state changes to ensure sensors do not start being sampled before the LEDs turn on/off.
+* 2.0.0 (2012-02-14): Initial release of library on GitHub (with Arduino 1.0 compatibility).
